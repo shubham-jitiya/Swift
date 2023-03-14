@@ -216,3 +216,20 @@ class B: A {
 var b = B(b: "Of B overriding")
 //print(b.b)
 
+//Other
+//Can we use convinience initialiser in struct
+struct DeprecatedCurrency {
+    let code: String
+}
+
+struct SupportedCurrency {
+    let code: String
+
+//    convenience init(_ currency: DeprecatedCurrency) { // error!!
+//        self.init(code: currency.code)
+//    }
+
+    init(code: String) {
+        self.code = code
+    }
+}
